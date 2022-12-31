@@ -1,0 +1,106 @@
+.container {
+    width: 1024px;
+    display: flex;
+}
+
+.goods {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    padding: 20px;
+    margin: 20px;
+}
+.table-title, .table-add {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.name-title, .price-title, .action-title, .name, .price, .title {
+    min-width: 240px;
+    display: flex;
+    max-width: 33%;
+}
+.table-row, .table-row-main {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+.cross-icon::before {
+    content: '\2716';
+    padding: 10px;
+    min-width: 33px;
+    max-width: 20px;
+    font-size: 20px;
+}
+.edit-icon::before {
+    content: '\270E';
+    padding: 10px;
+    max-width: 63px;
+    min-width: 40px;
+    font-size: 20px;
+}
+
+.add-icon::before {
+    content: '\002B';
+    padding: 10px;
+    max-width: 63px;
+    min-width: 40px;
+    font-size: 25px;
+}
+
+.popup {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 100;
+  }
+  
+  .popup::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+  }
+  
+  .popup__window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 600px;
+    max-width: 1024px;
+    height: 300px;
+    text-align: center;
+    border-radius: 14px;
+    padding: 0 18px;
+    /* border: 1px solid black; */
+    background-color: white;
+    box-shadow: 0px 0px 8px 5px rgba(34, 60, 80, 0.2);
+  }
+  
+  .popup_hidden {
+    display: none;
+  }
+  .inputs-group {
+    text-align: start;
+  }
+  .inputs-group #name, .inputs-group #price {
+    width: 100%;
+    margin: 10px 0;
+    height: 20px;
+    border-radius: 15px;
+  }
+  .popup__button_save, .popup__button_cancel {
+    margin: 0 20px;
+  }
+  .border-red {
+    border: 1px solid red;
+  }
